@@ -3,9 +3,9 @@
  * Description :            Simple welcome app in Kotlin
  * Author :                 Thierry Perroud
  * Creation date :          08.05.2026
- * Modified by :            -
- * Modification date :      -
- * Version :                1.0
+ * Modified by :            Thierry Perroud
+ * Modification date :      08.05.2026
+ * Version :                1.1
  **************************************************************************************************/
 package com.example.welcomecardapp
 
@@ -148,6 +148,20 @@ fun WelcomeCardApp() {
                             currentScreen = "details"
                         }
                     )
+
+                    Spacer(modifier = Modifier.height(16.dp))
+
+                    /*** RESET BUTTON ***/
+                    Button(
+                        onClick = {
+                            userName = ""
+                            selectedMood = "Heureux"
+                            showCard = false
+                        },
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Text("Réinitialiser")
+                    }
                 }
             }
         }
