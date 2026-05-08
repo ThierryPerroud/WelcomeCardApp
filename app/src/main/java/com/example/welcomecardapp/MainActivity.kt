@@ -5,7 +5,7 @@
  * Creation date :          08.05.2026
  * Modified by :            Thierry Perroud
  * Modification date :      08.05.2026
- * Version :                1.2
+ * Version :                1.3
  **************************************************************************************************/
 package com.example.welcomecardapp
 
@@ -13,7 +13,6 @@ package com.example.welcomecardapp
  * Imports
  **************************************************************************************************/
 import android.os.Bundle
-import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Column
@@ -126,16 +125,9 @@ fun WelcomeCardApp() {
                 val context = LocalContext.current
 
                 Button(
+                    enabled = userName.isNotBlank(),
                     onClick = {
-                        if (userName.isBlank()) {
-                            Toast.makeText(
-                                context,
-                                "Veuillez saisir votre prénom",
-                                Toast.LENGTH_SHORT
-                            ).show()
-                        } else {
-                            showCard = true
-                        }
+                        showCard = true
                     },
                     modifier = Modifier.fillMaxWidth()
                 ) {
