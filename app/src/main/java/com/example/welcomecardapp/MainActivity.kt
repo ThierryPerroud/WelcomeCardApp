@@ -5,7 +5,7 @@
  * Creation date :          08.05.2026
  * Modified by :            Thierry Perroud
  * Modification date :      08.05.2026
- * Version :                1.1
+ * Version :                1.2
  **************************************************************************************************/
 package com.example.welcomecardapp
 
@@ -91,6 +91,11 @@ fun WelcomeCardApp() {
                 )
 
                 Spacer(modifier = Modifier.height(8.dp))
+
+                /*** CHARACTER COUNTER ***/
+                Text("Nombre de caractères : ${userName.length}")
+
+                Spacer(modifier = Modifier.height(6.dp))
 
                 /*** MOOD SELECTION ***/
                 Row(
